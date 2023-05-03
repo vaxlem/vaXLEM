@@ -1,0 +1,115 @@
+body{
+    margin: 0px;
+    font-size: 75px;
+    text-align: center;
+    /* background-image: linear-gradient(75deg, rgba(255, 0, 0, 0.065), rgba(255, 255, 0, 0.912), rgba(0, 0, 255, 0.444) ); */
+}
+.va{
+    /* found you out at last */
+    
+    /* display: inline-block;
+    position: relative;
+    right: 0rem; */
+    text-align: center;
+    padding-top: 1.8rem;
+    padding-left: 1rem;
+    margin: auto;
+
+}
+
+h3{
+    padding:5rem
+}
+
+h1{color: rgba(0, 0, 128, 0.41);
+padding-bottom: auto;}
+
+.font {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; align-content: center;}
+
+
+#ml-auto{
+    margin-top: 4rem ;
+    position: absolute;
+    left: 18rem;
+    padding-left: 2rem;
+}
+
+#contact {
+    background-color: rgba(255, 0, 0, 0.582);
+    height: 10rem;
+    text-align: center;
+    
+
+}
+.x{
+    display: flex;
+    flex-direction: row;
+    padding: 0rem;
+    margin-right: 10rem;
+}
+.align{
+    flex:190rem;
+}
+
+.img{
+    width: 345px;
+    height: 225px;
+}
+img{
+    width: 540px;
+    height: 427px;
+}
+td{
+    text-align: center;
+    text-transform: uppercase;
+}
+nav{
+    display: block;
+}
+
+.nav-link li {
+    display: inline-block;
+    margin: 15px;
+    background-color: #fff;
+}
+.nav-logo{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+.nav-logoo{
+    width: 50px;
+    height: 50px;
+}
+
+nav-logo{
+    background-color: black;
+    width: 100%;
+}
+
+.rotation{background-color: #d2656562; margin: auto; text-align: center; width: 500px;height: 500px;
+ transform:rotate(95deg) ; position: absolute;margin-left: 40rem;
+}
+
+/* TABLET */
+@media screen and (max-width: 1536px) {
+    .nav-links {
+      width: 75%;
+      margin-left: 10px;
+    }
+  }
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    body {
+      display:contents;
+    }
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+    body{
+      overflow-x: hidden;
+    }
+}

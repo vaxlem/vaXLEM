@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>                                      
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./CS.css">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="./fav-icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav-icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav-icon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest"> -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav-icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav-icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav-icon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgba(135, 207, 235, 0.664);
+}
+
+p{color: blueviolet; font-weight: bolder; line-height: 2rem;
+}
+
+
+/* footer section */
+
+#footer{
+  text-decoration: none;
+  padding: 5rem 3rem;
+  background-color: #87ae88;
+  text-align:center;
+  color: #fff;
+  font-size: 3.5rem;
+  font-family: montserrat-black;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+
+.social-icon{
+  font-size:3rem;
+  color:#fff;
+  padding: 0rem 0.4rem 0rem;
+}
+h1{
+  font-size:larger;
+}
+h2{
+  padding-left: 2rem;
+
+}
+p{
+  color: #f1f1f1af;
+  font-size: 1.0rem;
+  text-align: center;
+  margin:0.2rem 0rem 0rem;
+  padding-bottom: 0rem;
+  font-weight: bold;
+}
+
+
+/* book display in hoverNav */
+.book{
+  width: 25rem;
+  height: 25rem;
+  position: relative;
+  left: 20rem;
+  bottom: 7rem;
+  z-index:-1;
+  transform:rotate(5deg);
+  border-radius: 20%;
+  margin-bottom: 0px;
+}
+/* foe general */
+/* .book{
+  display: inline-block;
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  left: 20rem;
+  bottom: 10rem;
+  z-index:-1;
+  transform:none;
+  border-radius: 20%;
+  transform:rotate(5deg);
+
+
+} */
+.btn {
+  color: #fff;
+  background-color: #c82333;
+  border-color: #bd2130;
+  /* margin-left: 25em; */
+  margin-left: 8rem;
+  box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+}
+
+/* .container-fluid{
+.btn{
+   */
+/* } */
+.container-fluid{
+  /* margin:1rem 10rem 0rem 3.3rem; height: 4em; */
+  margin:1rem 0rem 0rem 3.3rem; height: auto;
+  /* margin:1rem 10rem 0rem 10.3rem; height: 1em; */
+}
+
+img{padding: 3px 16px 3px 1px; width: 56px; height: 47px;}
+/* img{width: 56px;padding-bottom: 7px;margin-bottom: 4px;padding-top: 7px;
+} */
+.nav-logo{ margin: auto; 
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;}
+.navbar{
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .header {
+  background: red;
+  padding: 16px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: #ccc;
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* hovertest set */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(194, 58, 58);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+  text-anchor: middle;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  position: absolute;
+  color: yellow;
+}
+.yellow {color: rgb(83, 43, 226); font-weight: bolder; line-height: 2rem;
+}
+
+/* <body style="text-align:center;"> */
+/* <!-- end of hovertest set --> */
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+ /* Extra small devices (phones, 600px and down) */
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media only screen and (max-width: 600px) {
+/* book displayNav  */}
+.book{
+  display: inline-block;
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  margin-top: 1rem;
+  left: 0rem;
+  bottom: 0rem;
+  z-index:-1;
+  transform:none;
+  border-radius: 20%;}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600.1px){
+/* .container {background: green;} */  
+
+.book{
+  display: inline-block;
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  left: 2rem;
+  bottom: 10rem;
+  z-index:-1;
+  transform:none;
+  border-radius: 20%;
+  transform:rotate(5deg);
+
+
+  
+}
+.yellow {color: rgba(0, 128, 0, 0.498); font-size:xx-large; font-weight:  bolder; line-height: 2rem;
+}
+}
+/* Medium devices (landscape tablets, 768px and up) */ 
+@media only screen and (min-width: 768px) {
+         
+  .book{
+  display: inline-block;
+ 
+  width: 25rem;
+  height: 20rem;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  left: 12.6rem;
+  bottom: 13.7rem;
+  z-index:-1;
+  transform:none;
+  border-radius: 20%;
+  transform:rotate(5deg);
+
+
+}
+.yellow {color: rgb(83, 43, 226); font-weight: bolder; line-height: 2rem;
+}
+}
+          
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+.book{
+  display: inline-block;
+  /* width: 20rem;
+  height: 20rem; */
+
+  width: 30rem;
+  height: 25rem;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  left: 15rem;
+  bottom: 13.7rem;
+  z-index:-1;
+  transform:none;
+  border-radius: 20%;
+  transform:rotate(5deg);
+
+
+}}
+          /* .container {background: orange;}   */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .book{
+  display: inline-block;
+  width: 30rem;
+  height: 25rem;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  left: 20rem;
+  bottom: 13rem;
+  z-index:-1;
+  transform:none;
+  border-radius: 20%;
+  transform:rotate(5deg);
+
+
+}}
+
+
+
+@media screen and (max-width: 1536px) {
+      /* .nav-links li {
+        margin-left: 10px;
+      } */
+
+/* .yellow {color: rgb(83, 43, 226); font-weight: bolder; line-height: 2rem;
+} */
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar" fixed>
+  <div ><img class="nav-logo" src="./fav-icon/favicon.ico" alt="vaXLem logo" >
+  <h1 class="nav-logo" >VAXLEM</h1></div>
+  <a href="./index.html ">Home</a>
+  <a href="./content.html">French</a>
+  <div class="dropdown">
+    <button class="dropbtn">table of content 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Mega Menu</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>Category 1</h3>
+          <a href="./carouselSlide.html"onclick="alert('you are about to BUY VaXLem')">Alphabets</a>
+          <a href="https://selar.co/z32k" onclick="alert('you are about to BUY VaXLem')">Numerals 1</a>
+          <!-- <button class="btn btn-danger btn-lg btn-dark btn-project contact-heading" type="button" onclick="alert('you are about to BUY VaXLem')" style="margin: 7rem auto;"><i class="fa fa-envelope " style="padding-right: 0.5rem;"></i><a href="./market place.html">download</a> </button>  -->
+
+          <a href="./tableofcont.html/animal .html" onclick="alert('you are about to BUY VaXLem')">Animals</a>
+        </div>
+        <div class="column">
+          <h3>Category 2</h3>
+          <a href="./tableofcont.html/home_items.html" onclick="alert('you are about to BUY VaXLem')">Home-Items</a>
+          <a href="./tableofcont.html/action _words.html" onclick="alert('you are about to BUY VaXLem')">Action Words</a>
+          <a href="./tableofcont.html/time_and_seasons.html" onclick="alert('you are about to BUY VaXLem')">Time and Season</a>
+        </div>
+        <div class="column">
+          <h3>Category 3</h3>
+          <a href="./tableofcont.html/food.html" onclick="alert('you are about to BUY VaXLem')">Foods</a>
+          <a href="./tableofcont.html/body_parts.html" onclick="alert('you are about to BUY VaXLem')">Body Parts</a>
+          <a href="./tableofcont.html/bird .html" onclick="alert('you are about to BUY VaXLem')">Birds</a>
+        </div>
+        <div class="column">
+          <h3>Category 4</h3>
+          <a href="./tableofcont.html/days.html" onclick="alert('you are about to BUY VaXLem')">Days</a>
+          <a href="./tableofcont.html/month.html" onclick="alert('you are about to BUY VaXLem')">Month</a>
+          <a href="./tableofcont.html/times.html" onclick="alert('you are about to BUY VaXLem')">Times</a>
+        </div><div class="column">
+          <h3>Category 5</h3>
+          <a href="./tableofcont.html/symbols.html" onclick="alert('you are about to BUY VaXLem')">Symbols</a>
+          <a href="./tableofcont.html/numerals _ll.html" onclick="alert('you are about to BUY VaXLem')">Numerals 2</a>
+          <a href="./tableofcont.html/people and places.html" onclick="alert('you are about to BUY VaXLem')">People and PLaces</a>
+        </div><div class="column">
+          <h3>WORK BOOK</h3>
+          <a href="./tableofcont.html/workbook.html" onclick="alert('you are about to BUY VaXLem')"> BOOK 1</a>
+          <a href="./tableofcont.html/workbook.html" onclick="alert('you are about to BUY VaXLem')">BOOK 2</a>
+          <a href="./tableofcont.html/sent" onclick="alert('you are about to BUY VaXLem')">SIMPLE SENTENCES</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+<div class="padding16" style="padding:16px; width: 390px;">
+  
+  <h3 style="font-size: x-large; font-weight: bold;">See the Topics in above Table of Content (Select a Topic)</h3>
+  <p class="yellow" >Hover over the "table  of content" above to see the mega menu.</p>
+  <!-- <p>Resize the browser window to see the responsive effect.</p> -->
+  <h5 style="font-size: x-large; font-weight: bold;">click on a TOPiC to start to place  an OrDER for a copy</h5>
+</div>
+
+<div >
+  <button class="btn " type="button" onclick="alert('you are about to BUY VaXLem')"><i class="fa fa-envelope " style="padding-right: 0.5rem;"></i><a href="https://selar.co/z32k">download</a> </button> 
+
+</div>
+<div class="book">
+  <img class="book" src="./image/5.jpg" alt="">
+</div>
+</div>
+
+</div>
+<!-- <div class="row">
+  <div class="col-md">  <img class="book" src="./images/5.jpg" alt="">
+  </div>
+  <div class="col-md-6">  <img class="book" src="./images/5.jpg" alt="">
+  </div>
+
+</div> --><footer id="footer">Contact Information
+      <br>
+      <a href="mailto:vaxlem5@gmail.com"><i class="social-icon fa fa-envelope" alt="e-mail"></i></a>
+      <a href="https://www.facebook.com/109590614749846/"><i class="social-icon fa fa-facebook" alt="fbook"></i></a>
+      <a href="https://twitter.com/VaXlem?s=08"><i class="social-icon fa fa-twitter" alt="twitter"></i></a>
+      <i class="social-icon fa fa-linkedin"></i>
+      <i class="social-icon fa fa-instagram"></i>
+    
+  <p>© 2023 HERMON SEL HAMMAH TETTEY VaxLemStore. <br> All Rights Reserved.
+  </p>
+    </footer>
+</body>
+</html>
+
+<!-- <head> -->
+  <!--load all Font Awesome styles -->
+  <!-- <link href="path_to_css_files/all.css" rel="stylesheet">
+</head>
+<body>
+  <i class="fas fa-user"></i>  -->
+  <!-- uses solid style -->
+  <!-- <i class="far fa-user"></i>  -->
+  <!-- uses regular style -->
+  <!-- <i class="fab fa-github-square"></i>  -->
+  <!-- uses brands style -->
+<!-- </body>                  -->
