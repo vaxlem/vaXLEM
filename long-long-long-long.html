@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAXLEM</title>
+    <link rel="stylesheet" href="./style (2).css">
+    <link rel="stylesheet" href="./bootstrap-4.5.3-dist/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="" href="./CS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,400&family=Montserrat:wght@900&family=Roboto:ital,wght@0,300;0,400;1,400&family=Sacramento&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav-icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav-icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav-icon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    
+<!-- design for mobile first and use min for large screens -->
+    <style>
+    body {
+        font-family: "Lato", sans-serif;
+        background-color: #6caaff;
+        margin: auto;
+        color: rgba(52, 55, 55, 0.762);
+      }
+    .clear{
+      clear:both;
+    }  
+    a{
+      color: rgb(7, 7, 6);
+      text-decoration: underline;
+    }
+/* header column */
+      .header{
+        text-align:center;           
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        background-color: #0d0d0bb8;
+        border: 1px solid red;
+        border-bottom-right-radius:10px;
+        border-bottom-left-radius:10px;
+        box-shadow: 2px 2px 2px red;
+        
+        }
+
+      /* pronunciation chart    */
+      .pronunciation-chart,btn-danger{
+        /* position: absolute;
+        right: 1rem;
+        top:0.62rem;
+        font-size:13px;
+        background-color: #080128ed; */
+        /* background-color: #2196f3; */
+        /* background-color: #7900ff; */
+                        
+        }
+      .col{
+        display: inline-block;
+        }
+
+        #bn{
+          float: left;
+          /* padding-left: 3rem; */
+        }
+  /* #bn{height:22.5px; */
+        /* padding-left: rem; */
+        /* border-bottom-right-radius:10px;
+        border-bottom-left-radius:10px;
+        border-top-right-radius:30px;
+        border-top-left-radius:10px;
+        box-shadow: 2px 2px 2px rgb(239, 4, 4);
+        transition-duration: 50s ease; 
+   }*/
+    #bn:hover{
+        background-color: #555;
+        /* color: #ff0; */
+   }
+/* text Area  alighn  */
+    .txtArea-align{
+      padding: 0rem 5rem 0rem 2.5rem;
+      padding: auto;
+      /* height: 2px; */
+      /* font-size: 11px; */
+      font-size: 11px;
+      width:fit-content;
+    }
+
+  /* place holder text */
+    #text{
+      /* text-align: center; */
+    }
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: newColumn; }
+.item5 { grid-area: right; }
+.item6 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu main newColumn newColumn right'
+    'menu menu main newColumn newColumn right'
+    'menu menu main newColumn newColumn right'
+    'menu menu main newColumn newColumn right'
+    'footer footer footer footer footer footer';
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  overflow: hidden; /* Hide the overflow from the grid container */
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+/* Style for the new column */
+.grid-container > .newColumn {
+  grid-area: newColumn;
+  /* Additional styling for the new column if needed */
+  overflow-y: auto; /* Make the new column scrollable */
+}
+
+/* Style for the main container */
+.grid-container > .main {
+  grid-area: main;
+  /* Additional styling for the main container if needed */
+  overflow-y: auto; /* Make the main container scrollable */
+}
+
+/* Style for the right container */
+.grid-container > .right {
+  grid-area: right;
+  /* Additional styling for the right container if needed */
+  overflow-y: auto; /* Make the right container scrollable */
+}
+
+/* Style for the footer container */
+.grid-container > .footer {
+  grid-area: footer;
+  /* Additional styling for the footer container if needed */
+  grid-row: span 3; /* Adjust the number of rows to make the footer longer */
+}
+
+/* Style for the fixed menu container */
+.grid-container > .menu {
+  grid-area: menu;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%; /* Set a fixed width for the menu container */
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  overflow-y: auto; /* Make the menu container scrollable */
+}
+
+/* Style for the fixed heading */
+h1 {
+  position: fixed;
+  top: 0;
+  left: 15%; /* Adjust left position based on the width of the menu container */
+  width: 85%; /* Adjust the width to take the remaining space */
+  background-color: #2196F3;
+  padding: 10px;
+  margin: 0;
+  z-index: 1; /* Ensure the heading is above other elements */
+}
+</style>
+</head>
+<body>
+
+<h1>Grid Layout</h1>
+
+<p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning:</p>
+
+<div class="grid-container">
+    <!-- <HEADER> -->
+    <div class="item1">
+        <h2 fix="true" style="background-color: #f4e2f6; color:rgba(0, 0, 128, 0.41);
+        margin:0 auto 0 auto;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+        'Helvetica Neue', sans-serif;">
+        WELCOME TO VAXLEM 
+        </h2>
+    </div>
+</div>
+  <div class="item2 menu">
+    <div class="" style="background-color: #2196f3;">    
+        <p class="p pp">Click on a topic <SPan style="display: none;">by the side </SPan>to see more.
+        </div>
+        <div class="sidenav" id="sidnv">
+            <a href="./about.html"><i class="fa fa-info-circle  fa-1x icon" aria-hidden="true"></i>
+              About</a>
+            <a href="./landingPage.html"><i class="fa fa-arrow-circle-left fa-1x icon" aria-hidden="true"></i>Go Back
+            </a>
+            <a href="./fren.html"><i class="fa fa-flag-checkered fa-1x icon" aria-hidden="true"></i>
+              French</a>
+            <a href="#footer"><i class="fa fa-address-card-o fa-1x icon" aria-hidden="true"></i>Contact</a>
+            <hr style=" border-width: 150px; border-style: dotted; padding: 0px; border: 0px; ">
+            <ol start="1">
+            <li><a href="./numerals.html">    <i class="fa fa-sort-alpha-asc fa-1x" aria-hidden="true"></i>
+              <span class="tableContent-ion" > ALPHABETS</span></a></li>
+            <li><a href="./numerals.html">    <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i>
+              <span class="tableContent-ion" >NUMERALS-1</span> </a></li>
+            <li><a href="./numerals.html">    <i class="fa fa-paw" aria-hidden="true"></i>
+              <span class="tableContent-ion" >ANIMALS</span></a></li>
+            <li><a href="./numerals.html">    <i class="fa fa-bicycle" aria-hidden="true"></i>
+              <span class="tableContent-ion" >HOME-ITEMS</span></a></li>
+            <li><a href="./numerals.html">    <i class="fa fa-comments-o" aria-hidden="true"></i>
+              <span class="tableContent-ion" >ACTION WORDS</span></a></li>
+            <li><a href="./numerals.html">    <i class="fa fa-cloud-download" aria-hidden="true"></i>
+              <span class="tableContent-ion" > TIMES AND SEASONS</span></a></li>
+            <li><a href="./numerals.html">    <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+              <span class="tableContent-ion" >FOODS [cereals, vegetable, tubers and fruits]</span></a></li>
+            <li><a href="./numerals.html">    <i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i>
+              <span class="tableContent-ion" >BODY PARTS</span></a></li>
+            <li><a href="./tableofcont.html/action _words.htmlbird"><i class="fa fa-grav" aria-hidden="true"></i>
+              <span class="tableContent-ion" > BIRDS</span></a></li>
+            <li><a href="./numerals.html"><i class="fa fa-history" aria-hidden="true"></i>
+              <span class="tableContent-ion" >DAYS</span></a></li>
+            <li><a href="./numerals.html"><i class="fa fa-calendar-o" aria-hidden="true"></i>
+              <span class="tableContent-ion" >MONTHS</span></a></li>
+            <li><a href="./numerals.html"><i class="fa fa-clock-o" aria-hidden="true"></i>
+              <span class="tableContent-ion" >TIMES</span></a></li>
+            <li><a href="./numerals.html"><i class="fa fa-plus-square-o" aria-hidden="true"></i>
+              <span class="tableContent-ion" >SYMBOLS</span></a></li>
+              <li><a href="./tableofcont.html/action _words.html">    <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i>
+                <span class="tableContent-ion" >NUMERALS-2</span> </a></li>
+              
+            <li><a href="./numerals.html">   <i class="fa fa-user-md" aria-hidden="true"></i> 
+              <span class="tableContent-ion" >PEOPLE AND PLACES</span></a></li>
+            <li><a href="./numerals.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              <span class="tableContent-ion" > WORK BOOK</span></a></li>
+            <li><a href="./numerals.html">    <i class="fa fa-language" aria-hidden="true"></i>
+              <span class="tableContent-ion" >SIMPLE SENTENCE</span></a</li>
+            </ol>
+              <br>
+          </div>
+      </div>
+  </div>
+  <div class="item3 main">Main
+    <button style="font-size:15px;cursor:pointer; " id="bn" class="btn pronunciation-chart">
+        <a href="./index.html"><h2 style="font-size:16px;"><i class="fa fa-file-audio-o fa-university" 
+          aria-hidden="true"> Pronunciation Chart</i></h2>
+        </a>
+        </button>
+        
+  </div>
+  <div class="item4 newColumn">New Column
+    <button style="font-size:15px; cursor:pointer; padding-left: 0px;" id="bn" class="btn"><a href="./dashboard.html"><h2 fi="false" style="font-size: 15px;"><i class="fa fa-home " ></i></h2></a></button>
+    <button style="font-size:15px;cursor:pointer" id="bn" class="btn"><a href="./landingPage.html"><h2 fi="fal" style="font-size: 15px;" ><i class="fa fa-university" aria-hidden="true" >  Classes</i></h2></a></button>
+
+    <!-- telephone cancellled from here in to botton-->
+    
+  </div>
+  <div class="item5 right">Right</div>
+   <!-- search section -->
+
+   <div  class="row txtArea-align">
+    <div class="col">
+          <!-- <textarea id="text" rows="1" cols="80" placeholder="Enter the word and click the talk button to be spoken for you. For example. banana"></textarea> -->
+          <textarea id="text" rows="1" cols="20" placeholder="Enter word, click Speak."></textarea>
+    </div>
+    <div class="col controls">
+          <button id="speakButton">Speak</button>
+    </div>
+    <div class="col">
+    <input style="float: inline-start;" type="text" id="searchInput" placeholder="&#9776 Search Word" onkeydown="handleEnterKey(event)">
+
+    <span  class="col search-icon" onclick="searchNames()"><i class="fa fa-search" aria-hidden="true"></i>
+    </span >
+    </div>
+    </div>
+  <!-- Repeated sequence for Main, New Column, and Right -->
+  <div class="item2 menu">Menu</div>
+  <div class="item3 main">Main</div>
+  <div class="item4 newColumn">New Column</div>
+  <div class="item5 right">Right</div>
+  
+  <div class="item2 menu">Menu</div>
+  <div class="item3 main">Main</div>
+  <div class="item4 newColumn">New Column</div>
+  <div class="item5 right">Right</div>
+  
+  <div class="item2 menu">Menu</div>
+  <div class="item3 main">Main</div>
+  <div class="item4 newColumn">New Column</div>
+  <div class="item5 right">Right</div>
+  <!-- End of repeated sequence -->
+
+  <!-- Footer row with repeated Main, New Column, and Right -->
+  <div class="item6 footer">Footer</div>
+  <div class="item3 main">Main</div>
+  <div class="item4 newColumn">New Column</div>
+  <div class="item5 right">Right</div>
+  <div class="item3 main">Main</div>
+  <div class="item4 newColumn">New Column</div>
+  <div class="item5 right">Right</div>
+  <div class="item3 main">Main</div>
+  <div class="item4 newColumn">New Column</div>
+  <div class="item5 right">Right</div>
+</div>
+
+</body>
+</html>
